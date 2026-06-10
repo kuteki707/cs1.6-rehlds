@@ -1,0 +1,21 @@
+services:
+  cs16-tournament:
+    image: cs16-rehlds:latest
+    container_name: cs16_match_server
+    network_mode: "host"
+    environment:
+      - MAP=de_dust2
+      - MAXPLAYERS=12
+      - TICKRATE=1000
+    volumes:
+      - ./config/server.cfg:/home/steam/hlds/cstrike/server.cfg
+      - ./config/reunion.cfg:/home/steam/hlds/cstrike/reunion.cfg
+      
+      - ./config/whblocker.ini:/home/steam/hlds/cstrike/addons/whblocker/config.ini
+      - ./config/reaimdetector.cfg:/home/steam/hlds/cstrike/addons/reaimdetector/reaimdetector.cfg
+      
+      - ./config/amxmodx:/home/steam/hlds/cstrike/addons/amxmodx/configs
+      
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
