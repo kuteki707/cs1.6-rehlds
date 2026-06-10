@@ -99,9 +99,9 @@ RUN mkdir -p /tmp/whb addons/whblocker && \
 
 # 7b. ReAimDetector
 COPY --chown=steam:steam vendor/reaimdetector_${REAIM_VERSION}.zip /tmp/reaim.zip
-RUN mkdir -p /tmp/reaim addons/reaimdetector && \
+RUN mkdir -p /tmp/reaim addons/amxmodx/modules && \
     unzip -q /tmp/reaim.zip -d /tmp/reaim && \
-    find /tmp/reaim -type f -name "reaimdetector_mm_i386.so" -exec mv {} addons/reaimdetector/ \; && \
+    find /tmp/reaim -type f -name "*amxx_i386.so" -exec cp {} addons/amxmodx/modules/reaimdetector_amxx_i386.so \; && \
     rm -rf /tmp/reaim.zip /tmp/reaim
 
 # =========================================================================
@@ -109,7 +109,6 @@ RUN mkdir -p /tmp/reaim addons/reaimdetector && \
 # =========================================================================
 RUN echo "linux addons/reunion/reunion_mm_i386.so" > addons/metamod/plugins.ini && \
     echo "linux addons/whblocker/whblocker_mm_i386.so" >> addons/metamod/plugins.ini && \
-    echo "linux addons/reaimdetector/reaimdetector_mm_i386.so" >> addons/metamod/plugins.ini && \
     echo "linux addons/amxmodx/dlls/amxmodx_mm_i386.so" >> addons/metamod/plugins.ini
 
 # =========================================================================

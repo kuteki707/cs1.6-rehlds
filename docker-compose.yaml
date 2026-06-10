@@ -1,6 +1,6 @@
 services:
   cs16-tournament:
-    image: cs16-rehlds:latest
+    image: kuteki/cs1.6-rehlds:1.1
     container_name: cs16_match_server
     network_mode: "host"
     environment:
