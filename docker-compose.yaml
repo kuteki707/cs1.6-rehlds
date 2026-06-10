@@ -1,7 +1,7 @@
 services:
   cs16-tournament:
-    image: kuteki/cs1.6-rehlds:1.1
-    container_name: cs16_match_server
+    image: kuteki/cs1.6-rehlds:1.2
+    container_name: cs1.6_rehlds
     network_mode: "host"
     environment:
       - MAP=de_dust2
@@ -9,13 +9,17 @@ services:
       - TICKRATE=1000
     volumes:
       - ./config/server.cfg:/home/steam/hlds/cstrike/server.cfg
+      - ./config/maps:/home/steam/hlds/cstrike/maps
       - ./config/reunion.cfg:/home/steam/hlds/cstrike/reunion.cfg
       
       - ./config/whblocker.ini:/home/steam/hlds/cstrike/addons/whblocker/config.ini
       - ./config/reaimdetector.cfg:/home/steam/hlds/cstrike/addons/reaimdetector/reaimdetector.cfg
       
       - ./config/amxmodx:/home/steam/hlds/cstrike/addons/amxmodx/configs
-      
+
+      - ./config/BotProfile.db:/home/steam/hlds/cstrike/BotProfile.db
+      - ./config/BotChatter.db:/home/steam/hlds/cstrike/BotChatter.db
+
     stdin_open: true
     tty: true
     restart: unless-stopped

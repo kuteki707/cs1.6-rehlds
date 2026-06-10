@@ -1,0 +1,44 @@
+ChatterRadio ReportIn
+{
+    "Reporting in."
+}
+
+ChatterRadio SectorClear
+{
+    "Sector clear."
+}
+
+ChatterRadio Spotted
+{
+    "Enemy spotted!"
+}
+
+ChatterRadio NeedBackup
+{
+    "Need backup!"
+}
+
+ChatterEvent Killed
+{
+    "Ugh!"
+}
+
+ChatterEvent BombPlanted
+{
+    "The bomb has been planted."
+}
+
+ChatterEvent GuardingDroppedC4
+{
+    "Guarding the bomb."
+}
+
+ChatterEvent Camp
+{
+    "Holding this position."
+}
+
+ChatterEvent HearingEnemy
+{
+    "I hear them..."
+}

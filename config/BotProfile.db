@@ -1,0 +1,62 @@
+Default
+	Skill = 50
+	Aggression = 50
+	Teamwork = 50
+	Cost = 0
+	VoicePitch = 100
+	Skin = 1
+End
+
+Template EasyBot
+	Difficulty = EASY
+	Skill = 30
+End
+
+Template NormalBot
+	Difficulty = NORMAL
+	Skill = 60
+End
+
+Template HardBot
+	Difficulty = HARD
+	Skill = 80
+End
+
+Template ExpertBot
+	Difficulty = EXPERT
+	Skill = 100
+End
+
+// --- Easy Bots ---
+EasyBot Clumsy
+End
+EasyBot Turtle
+End
+EasyBot Snail
+End
+
+// --- Normal Bots ---
+NormalBot Viper
+End
+NormalBot Cobra
+End
+NormalBot Razor
+End
+NormalBot Blade
+End
+
+// --- Hard Bots ---
+HardBot Phoenix
+End
+HardBot Falcon
+End
+HardBot Raptor
+End
+
+// --- Expert Bots ---
+ExpertBot Ace
+End
+ExpertBot Boss
+End
+ExpertBot King
+End

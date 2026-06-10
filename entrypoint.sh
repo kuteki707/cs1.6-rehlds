@@ -17,4 +17,5 @@ exec ./hlds_run \
     +maxplayers "${MAXPLAYERS}" \
     +sys_ticrate "${TICKRATE}" \
     -nomaster \
-    -insecure
+    -insecure \
+    -bots
