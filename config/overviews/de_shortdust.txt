@@ -1,0 +1,14 @@
+// overview description file for de_shortdust.bsp
+
+global 
+{
+	ZOOM	1.23
+	ORIGIN	128 	944	144
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/de_shortdust.bmp"
+	HEIGHT	-192
+}

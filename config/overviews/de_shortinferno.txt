@@ -1,0 +1,14 @@
+// overview description file for de_shortinferno.bsp
+
+global 
+{
+	ZOOM	1.50
+	ORIGIN	376 	1024	432
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/de_shortinferno.bmp"
+	HEIGHT	-64
+}

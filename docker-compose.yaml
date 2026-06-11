@@ -4,8 +4,8 @@ services:
     container_name: cs1.6_rehlds
     network_mode: "host"
     environment:
-      - MAP=de_dust2
-      - MAXPLAYERS=12
+      - MAP=de_shortdust2
+      - MAXPLAYERS=8
       - TICKRATE=1000
     volumes:
       - ./config/server.cfg:/home/steam/hlds/cstrike/server.cfg
@@ -13,7 +13,6 @@ services:
       - ./config/reunion.cfg:/home/steam/hlds/cstrike/reunion.cfg
       
       - ./config/whblocker.ini:/home/steam/hlds/cstrike/addons/whblocker/config.ini
-      - ./config/reaimdetector.cfg:/home/steam/hlds/cstrike/addons/reaimdetector/reaimdetector.cfg
       
       - ./config/amxmodx:/home/steam/hlds/cstrike/addons/amxmodx/configs
 
@@ -22,4 +21,14 @@ services:
 
     stdin_open: true
     tty: true
+    restart: unless-stopped
+
+  fastdl:
+    image: nginx:alpine
+    container_name: cs16_fastdl
+    ports:
+      - "80:80"
+    volumes:
+      - ./config/maps:/usr/share/nginx/html/maps:ro
+      - ./config/overviews:/usr/share/nginx/html/overviews:ro
     restart: unless-stopped
