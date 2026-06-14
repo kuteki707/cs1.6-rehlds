@@ -1,0 +1,8 @@
+// File: 	maplist.txt
+// Updated: 	17:20 2024/07/15
+// Description: This file is used to list maps to map menus.
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+de_shortdust2
+de_shortdust
+de_shortinferno
+de_shorttrain

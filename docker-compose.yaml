@@ -20,6 +20,7 @@ services:
       #- ./config/BotChatter.db:/home/steam/hlds/cstrike/BotChatter.db
 
       - ./config/matchbot_config:/home/steam/hlds/cstrike/addons/matchbot/cfg:ro
+      - ./config/maplist.txt:/home/steam/hlds/cstrike/addons/matchbot/maplist.txt:ro
     stdin_open: true
     tty: true
     restart: unless-stopped
