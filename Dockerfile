@@ -1,11 +1,11 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 # =========================================================================
 # 1. INFRASTRUCTURE & EXTENSION VERSION CONTROLS
 # =========================================================================
 ENV HLDS_DIR="/home/steam/hlds"
 ENV REHLDS_VERSION="3.15.0.896"
-ENV REGAMEDLL_VERSION="5.26.0.668"
+ENV REGAMEDLL_VERSION="5.30.0.814"
 ENV METAMOD_VERSION="1.3.0.149"
 ENV REUNION_VERSION="0.2.0.34"
 ENV REAPI_VERSION="5.29.0.358"
@@ -104,12 +104,20 @@ RUN mkdir -p /tmp/reaim addons/amxmodx/modules && \
     find /tmp/reaim -type f -name "*amxx_i386.so" -exec cp {} addons/amxmodx/modules/reaimdetector_amxx_i386.so \; && \
     rm -rf /tmp/reaim.zip /tmp/reaim
 
+# 7c. MatchBot Tournament Bundle
+COPY --chown=steam:steam vendor/matchbot.zip /tmp/mb.zip
+RUN mkdir -p /tmp/mb && \
+    unzip -q /tmp/mb.zip -d /tmp/mb && \
+    cp -r /tmp/mb/addons/matchbot addons/ && \
+    cp /tmp/mb/rehlds.cfg ${HLDS_DIR}/cstrike/ && \
+    rm -rf /tmp/mb.zip /tmp/mb
 # =========================================================================
 # 8. METAMOD EXECUTION PRIORITY ROUTING
 # =========================================================================
 RUN echo "linux addons/reunion/reunion_mm_i386.so" > addons/metamod/plugins.ini && \
     echo "linux addons/whblocker/whblocker_mm_i386.so" >> addons/metamod/plugins.ini && \
-    echo "linux addons/amxmodx/dlls/amxmodx_mm_i386.so" >> addons/metamod/plugins.ini
+    echo "linux addons/amxmodx/dlls/amxmodx_mm_i386.so" >> addons/metamod/plugins.ini && \
+    echo "linux addons/matchbot/dlls/matchbot_mm.so" >> addons/metamod/plugins.ini
 
 # =========================================================================
 # 9. CONTAINER CONFIGURATION MAPS & ENTRYPOINT TRIGGER

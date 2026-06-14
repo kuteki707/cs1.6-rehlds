@@ -1,7 +1,7 @@
 services:
   cs16-tournament:
-    image: kuteki/cs1.6-rehlds:1.2
-    container_name: cs1.6_rehlds
+    image: kuteki/cs1.6-rehlds:1.3
+    container_name: cs1.6-rehlds
     network_mode: "host"
     environment:
       - MAP=de_shortdust2
@@ -16,16 +16,17 @@ services:
       
       - ./config/amxmodx:/home/steam/hlds/cstrike/addons/amxmodx/configs
 
-      - ./config/BotProfile.db:/home/steam/hlds/cstrike/BotProfile.db
-      - ./config/BotChatter.db:/home/steam/hlds/cstrike/BotChatter.db
+      #- ./config/BotProfile.db:/home/steam/hlds/cstrike/BotProfile.db
+      #- ./config/BotChatter.db:/home/steam/hlds/cstrike/BotChatter.db
 
+      - ./config/matchbot_config:/home/steam/hlds/cstrike/addons/matchbot/cfg:ro
     stdin_open: true
     tty: true
     restart: unless-stopped
 
   fastdl:
     image: nginx:alpine
-    container_name: cs16_fastdl
+    container_name: cs16-fastdl
     ports:
       - "80:80"
     volumes:
