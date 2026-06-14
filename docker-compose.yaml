@@ -7,6 +7,8 @@ services:
       - MAP=de_shortdust2
       - MAXPLAYERS=8
       - TICKRATE=1000
+      - PORT=27015
+      - CLIENTPORT=27005
     volumes:
       - ./config/server.cfg:/home/steam/hlds/cstrike/server.cfg
       - ./config/maps:/home/steam/hlds/cstrike/maps
