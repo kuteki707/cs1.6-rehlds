@@ -3,8 +3,8 @@ services:
     image: kuteki/cs1.6-rehlds:1.2
     container_name: cs1.6-rehlds
     ports:
-      -"27015:27015/udp"
-      -"27015:27015/tcp"
+      - "27015:27015/udp"
+      - "27015:27015/tcp"
     environment:
       - MAP=de_shortdust2
       - MAXPLAYERS=8
