@@ -1,62 +1,2077 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: Michael S. Booth, Turtle Rock Studios (www.turtlerockstudios.com)
+//
+// This database defines bot personalities. 
+// Feel free to edit it and define your own bots.
+//
+
+
+//----------------------------------------------------------------------------
+
+//
+// All profiles begin with this data and overwrite their own
+//
 Default
 	Skill = 50
 	Aggression = 50
-	Teamwork = 50
+	ReactionTime = 0.3
+	AttackDelay = 0
+	Teamwork = 75
+	WeaponPreference = none
 	Cost = 0
+	Difficulty = NORMAL
 	VoicePitch = 100
+	Skin = 0
+End
+
+//----------------------------------------------------------------------------
+
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template Rifle
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template RifleT
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galil
+	WeaponPreference = famas
+	WeaponPreference = mp5
+End
+
+Template Punch
+	WeaponPreference = aug
+	WeaponPreference = sg552
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template PunchT
+	WeaponPreference = sg552
+	WeaponPreference = aug
+	WeaponPreference = galil
+	WeaponPreference = famas
+	WeaponPreference = mp5
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = sg550
+	WeaponPreference = g3sg1
+	WeaponPreference = scout
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Power
+	WeaponPreference = m249
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Shotgun
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Shield
+	WeaponPreference = shield
+	WeaponPreference = m4a1			// in case shield is disallowed
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+End
+
+Template Spray
+	WeaponPreference = p90
+	WeaponPreference = tmp
+	WeaponPreference = mac10
+	WeaponPreference = mp5
+End
+
+
+// skill templates
+Template Elite
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.2
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 85
+End
+
+Template Expert
+	Skill = 90
+	Aggression = 90
+	ReactionTime = 0.2
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 88
+End
+
+Template VeryHard
+	Skill = 80
+	Aggression = 80
+	ReactionTime = 0.25
+	Cost = 3
+	Difficulty = HARD+EXPERT
+	VoicePitch = 92
+End
+
+Template Hard
+	Skill = 75
+	Aggression = 75
+	ReactionTime = 0.25
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 94
+End
+
+Template Tough
+	Skill = 60
+	Aggression = 60
+	ReactionTime = 0.3
+	AttackDelay = 0.35
+	Cost = 2
+	Difficulty = NORMAL+HARD
+	VoicePitch = 96
+End
+
+Template Normal
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.4
+	AttackDelay = 0.7
+	Cost = 2
+	Difficulty = NORMAL
+End
+
+Template Fair
+	Skill = 25
+	Aggression = 30
+	ReactionTime = 0.4
+	AttackDelay = 1.0
+	Cost = 1
+	Difficulty = EASY+NORMAL
+	VoicePitch = 105
+End
+
+Template Easy
+	Skill = 0
+	Aggression = 20
+	ReactionTime = 0.5
+	AttackDelay = 1.5
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+End
+
+//----------------------------------------------------------------------------
+//
+// These are the individual bot profiles, which inherit first from 
+// Default and then the specified Template(s), in order
+//
+
+Elite+Rifle Cliffe
+	Skin = 1
+	VoicePitch = 95
+End
+
+Elite+Spray Minh
+	Skin = 2
+	VoicePitch = 105
+End
+
+Elite+Shotgun Crusher
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Punch Pheonix
+	Skin = 4
+	VoicePitch = 110
+End
+
+Elite+Punch Garret
+	Skin = 4
+	VoicePitch = 110
+End
+
+Elite+Power Rock
+	Skin = 2
+	VoicePitch = 80
+End
+
+Elite+PunchT Shark
+	Skin = 4
+	VoicePitch = 90
+End
+
+Elite+Rifle Wolf
+	Skin = 2
+	VoicePitch = 98
+End
+
+Elite+RifleT Gunner
+	Skin = 1
+	VoicePitch = 96
+End
+
+Elite+Sniper Zed
+	Skin = 3
+	VoicePitch = 105
+End
+
+Elite+Sniper Vitaliy
+	Skin = 3
+	VoicePitch = 105
+End
+
+Elite+Punch Ridgway
+	Skin = 3
+	VoicePitch = 115
+End
+
+Elite+RifleT Steel
+	Skin = 1
+	VoicePitch = 84
+End
+
+Elite+PunchT Stone
+	Skin = 4
+	VoicePitch = 86
+End
+
+Elite+RifleT Maverick
+	Teamwork = 0
+	Aggression = 100
+	Skin = 3
+	VoicePitch = 98
+End
+
+Elite+Shield Colby
+	Aggression = 100
+	Teamwork = 95
+	Skin = 4
+	VoicePitch = 95
+End
+
+Elite Flash
+	Aggression = 75
+	Teamwork = 95
+	Skin = 3
+	VoicePitch = 115
+End
+
+Elite+Sniper Eagle
+	Aggression = 50
+	Teamwork = 100
+	Skin = 4
+	VoicePitch = 108
+End
+
+Elite+Spray Sandman
+	Aggression = 100
+	Teamwork = 100
+	Skin = 4
+	VoicePitch = 84
+End
+
+Elite+Rifle Barney
+	Aggression = 100
+	Teamwork = 100
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleT RealSteel
+	Aggression = 100
+	Teamwork = 100
+	Skin = 2
+	VoicePitch = 90
+End
+
+Elite+Punch RealDuke
+	Aggression = 100
+	Teamwork = 100
+	Skin = 1
+	VoicePitch = 92
+End
+
+Elite+Power Bear
+	Aggression = 100
+	Teamwork = 100
+	Skin = 3
+	VoicePitch = 82
+End
+
+Elite+Spray Jackal
+	Aggression = 100
+	Skin = 4
+	VoicePitch = 85
+End
+
+Elite+Sniper Hawk
+	Aggression = 50
+	Skin = 3
+	VoicePitch = 85
+End
+
+Elite+RifleT Spider
+	Aggression = 0
+	Skin = 1
+	VoicePitch = 85
+End
+
+Elite+RifleT Snake
+	Aggression = 100
+	Skin = 2
+	VoicePitch = 85
+End
+
+Elite+Spray Discord
+	Aggression = 75
+	Skin = 1
+	VoicePitch = 85
+End
+
+Elite+Punch Saber
+	Aggression = 90
+	Teamwork = 60
+	Skin = 2
+	VoicePitch = 85
+End
+
+Elite Rhino
+	Aggression = 80
+	Teamwork = 70
+	Skin = 4
+	VoicePitch = 85
+End
+
+Elite Fleta
+	VoicePitch = 83
+End
+
+Elite Gump
+	VoicePitch = 84
+End
+
+Elite Romeo
+	VoicePitch = 85	
+End
+
+Elite Salvatore
+	VoicePitch = 86	
+End
+
+Elite Samson
+	VoicePitch = 87
+End
+
+Elite Scoop
+	VoicePitch = 86	
+End
+
+Elite Severino
+	VoicePitch = 102
+End
+
+Elite Storm
+	VoicePitch = 101
+End
+
+Elite Thomas
+	VoicePitch = 100
+End
+
+Elite Sting
+	VoicePitch = 99	
+End
+
+Elite Spotty
+	VoicePitch = 98	
+End
+
+Elite Robbie
+	VoicePitch = 97
+End
+
+Elite Rio
+	VoicePitch = 96
+End
+
+Elite Jasper
+	VoicePitch = 95
+End
+
+Elite Redford
+	VoicePitch = 94
+End
+
+Elite Ralph
+	VoicePitch = 93
+End
+
+Elite Phillip
+	VoicePitch = 92
+End
+
+Elite Pluto
+	VoicePitch = 91	
+End
+
+Elite Bob	
+	VoicePitch = 90
+End
+
+Elite Craksus
+	VoicePitch = 86	
+End
+
+Elite Janus
+	VoicePitch = 99
+End
+
+Elite Windleo
+	VoicePitch = 93
+End
+
+Elite RealRoy
+	VoicePitch = 93
+End
+
+Elite Andrew
+	VoicePitch = 93
+End		
+
+Elite Roy
+	VoicePitch = 98
+End
+	
+Elite Vena
+	VoicePitch = 86
+End
+
+//----------------------------------------
+
+Expert+Rifle Ace
+	Aggression = 50
+	Teamwork = 80
+	Skin = 1
+	VoicePitch = 95
+End
+
+Expert+RifleT Arnold
+	VoicePitch = 85
+End
+
+Expert+RifleT Arnoldt
+	VoicePitch = 81
+End
+
+Expert+Shield Brent
+	Aggression = 100
+	Teamwork = 100
+	Skin = 4
+	VoicePitch = 90
+End
+
+Expert+Rifle Brett
+	VoicePitch = 100
+End
+
+Expert+Spray Cobra
+	Aggression = 70
+	Skin = 1
+	VoicePitch = 88
+End
+
+Expert+Sniper Crow
+	Aggression = 50
+	Skin = 3
+	VoicePitch = 88
+End
+
+Expert+Spray Hyena
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 88
+End
+
+Expert+Punch Jake
+	Aggression = 50
+	Teamwork = 80
+	Skin = 1
+	VoicePitch = 87
+End
+
+Expert+Punch Kurt
+	VoicePitch = 95
+End
+
+Expert+Sniper Kyle
+	VoicePitch = 115
+End
+
+Expert+Power Lou
+	Aggression = 75
+	Teamwork = 80
+	Skin = 4
+	VoicePitch = 82
+End
+
+Expert+Punch Maco
+	Aggression = 70
+	Teamwork = 70
+	Skin = 1
+	VoicePitch = 88
+End
+
+Expert Michael
+	Aggression = 25
+	Teamwork = 75
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+Shotgun Moe
+	VoicePitch = 87
+End
+
+Expert+Rifle Panther
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 88
+End
+
+Expert+Rifle Quade
+	VoicePitch = 91
+End
+
+Expert+Rifle Quintin
+	VoicePitch = 101
+End
+
+Expert Ringo
+	VoicePitch = 112
+End
+
+Expert+Spray Rooster
+	Aggression = 75
+	Teamwork = 80
+	Skin = 2
+	VoicePitch = 105
+End
+
+Expert+PunchT Rip
+	VoicePitch = 99
+End
+
+Expert+RifleT Tex
+	Aggression = 80
+	Teamwork = 50
+	Skin = 3
+	VoicePitch = 92
+End
+
+Expert+Power Wolfhound
+	Aggression = 100
+	Skin = 4
+	VoicePitch = 88
+End
+
+Expert+Power Xerxes
+	Aggression = 75
+	Teamwork = 50
+	Skin = 1
+	VoicePitch = 86
+End
+
+Expert+Rifle Zach
+	VoicePitch = 100
+End
+
+Expert Gemma
+	VoicePitch = 101	
+End
+
+Expert Gilbert
+	VoicePitch = 102
+End
+
+Expert Goofy
+	VoicePitch = 103
+End
+
+Expert Gregory
+	VoicePitch = 104
+End
+
+Expert Harley
+	VoicePitch = 105
+End
+
+Expert Hollis
+	VoicePitch = 106
+End
+
+Expert Neema
+	VoicePitch = 107
+End
+
+Expert Lloyd
+	VoicePitch = 108
+End
+
+Expert Kuper
+	VoicePitch = 109
+End
+
+Expert Klaus
+	VoicePitch = 110
+End
+
+Expert Karis
+	VoicePitch = 111
+End
+
+Expert Jericho
+	VoicePitch = 112
+End
+
+Expert Reggie
+	VoicePitch = 113
+End
+
+Expert Jaclyn
+	VoicePitch = 114
+End
+
+Expert Jace
+	VoicePitch = 115
+End
+
+Expert Isaac
+	VoicePitch = 116
+End
+
+Expert Ingrid
+	VoicePitch = 117
+End
+
+Expert Indira
+	VoicePitch = 118
+End
+
+Expert Hubert
+	VoicePitch = 119
+End
+
+Expert Machine
+	VoicePitch = 120
+End
+
+Expert Nia
+	VoicePitch = 120
+End
+
+//----------------------------------------
+
+VeryHard+Power Cory
+	Skin = 1
+	VoicePitch = 110
+End
+
+VeryHard+Power Crank
+	Aggression = 0
+	Skin = 2
+	VoicePitch = 92
+End
+
+VeryHard+RifleT Cutter
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 92
+End
+
+VeryHard+RifleT Fanatic
+	Aggression = 100
+	Skin = 2
+	VoicePitch = 92
+End
+
+VeryHard+Shotgun Gordon
+	Aggression = 75
+	Teamwork = 100
+	VoicePitch = 98
 	Skin = 1
 End
 
-Template EasyBot
-	Difficulty = EASY
-	Skill = 30
+VeryHard+Power Hammer
+	Aggression = 50
+	Skin = 4
+	VoicePitch = 92
 End
 
-Template NormalBot
-	Difficulty = NORMAL
-	Skill = 60
+VeryHard+Sniper Nails
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 92
 End
 
-Template HardBot
-	Difficulty = HARD
-	Skill = 80
+VeryHard+PunchT Poop
+	Aggression = 75
+	Skin = 4
+	VoicePitch = 92
 End
 
-Template ExpertBot
-	Difficulty = EXPERT
-	Skill = 100
+VeryHard+Sniper Quinn
+	Skin = 3
+	VoicePitch = 93
 End
 
-// --- Easy Bots ---
-EasyBot Clumsy
-End
-EasyBot Turtle
-End
-EasyBot Snail
+VeryHard+Rifle Seth
+	Skin = 2
+	VoicePitch = 100
 End
 
-// --- Normal Bots ---
-NormalBot Viper
-End
-NormalBot Cobra
-End
-NormalBot Razor
-End
-NormalBot Blade
+VeryHard+PunchT Sid
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 92
 End
 
-// --- Hard Bots ---
-HardBot Phoenix
-End
-HardBot Falcon
-End
-HardBot Raptor
+VeryHard RealSimon
+	Teamwork = 50
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 95
 End
 
-// --- Expert Bots ---
-ExpertBot Ace
+VeryHard+RifleT Vinny
+	Skin = 4
+	VoicePitch = 86
 End
-ExpertBot Boss
+
+VeryHard David
+	VoicePitch = 87	
 End
-ExpertBot King
+
+VeryHard Denver
+	VoicePitch = 88
+End
+
+VeryHard Ebony
+	VoicePitch = 89
+End
+
+VeryHard Edan
+	VoicePitch = 90
+End
+
+VeryHard Eldora
+	VoicePitch = 91
+End
+
+VeryHard Farrell
+	VoicePitch = 92
+End
+
+VeryHard Favian
+	VoicePitch = 93
+End
+
+VeryHard Felix
+	VoicePitch = 94
+End
+
+VeryHard Fidelio
+	VoicePitch = 95
+End
+
+VeryHard Darwin
+	VoicePitch = 110
+End
+
+VeryHard Danika
+	VoicePitch = 111
+End
+
+VeryHard Coyote
+	VoicePitch = 112
+End
+
+VeryHard Coco
+	VoicePitch = 113
+End
+
+VeryHard Chase
+	VoicePitch = 114
+End
+
+VeryHard Calix
+	VoicePitch = 115
+End
+
+VeryHard Bright
+	VoicePitch = 116
+End
+
+VeryHard Charles
+	VoicePitch = 117
+End
+
+VeryHard Beck
+	VoicePitch = 118
+End
+
+VeryHard Aster
+	VoicePitch = 119	
+End
+
+VeryHard Baldy
+	VoicePitch = 122	
+End
+
+VeryHard Baba
+	VoicePitch = 121	
+End
+
+VeryHard Siang
+	VoicePitch = 120	
+End
+
+VeryHard Alex
+	VoicePitch = 85	
+End
+
+VeryHard Abel
+	VoicePitch = 84	
+End
+
+VeryHard Alan
+	VoicePitch = 83
+End
+
+VeryHard Gali
+	VoicePitch = 82
+End
+
+VeryHard Taro
+	VoicePitch = 81
+End
+
+VeryHard Raps
+	VoicePitch = 96	
+End
+
+//----------------------------------------
+
+Hard+Sniper RealAlex
+	Aggression = 0
+	Teamwork = 80
+	Skin = 1
+	VoicePitch = 100
+End
+
+Hard+Spray Bandit
+	Aggression = 0
+	Skin = 4
+	VoicePitch = 94
+End
+
+Hard+RifleT Blade
+	Aggression = 100
+	Skin = 2
+	VoicePitch = 94
+End
+
+Hard+Rifle Brian
+	Skin = 1
+	VoicePitch = 100
+End
+
+Hard+Rifle Chad
+	Skin = 1
+	VoicePitch = 95
+End
+
+Hard+RifleT Chet
+	Skin = 2
+	VoicePitch = 90
+End
+
+Hard+Power Cole
+	Teamwork = 75
+	Aggression = 75
+	Skin = 4
+	VoicePitch = 88
+End
+
+Hard+Spray Gabe
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Punch Gary
+	Aggression = 50
+	Teamwork = 50
+	Skin = 1
+	VoicePitch = 77
+End
+
+Hard+Shotgun Hank
+	Skin = 1
+	VoicePitch = 98
+End
+
+Hard+Spray Igor
+	Teamwork = 90
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 120
+End
+
+Hard+Punch Invader
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 94
+End
+
+Hard+RifleT Ivan
+	Skin = 2
+	VoicePitch = 96
+End
+
+Hard+Punch Jim
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+PunchT Joe
+	Skin = 1
+	VoicePitch = 105
+End
+
+Hard+Rifle John
+	Skin = 2
+	VoicePitch = 97
+End
+
+Hard+Rifle RealLarry
+	Teamwork = 50
+	Aggression = 90
+	Skin = 2
+	VoicePitch = 94
+End
+
+Hard+Rifle Raider
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 94
+End
+
+Hard+Shotgun Ray
+	Teamwork = 75
+	Aggression = 100
+	Skin = 5
+	VoicePitch = 110
+End
+
+Hard+Sniper Razor
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 94
+End
+
+Hard+Rifle RealSam
+	Teamwork = 90
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 90
+End
+
+Hard+Rifle Tony
+	Skin = 4
+	VoicePitch = 84
+End
+
+Hard+Shield Travis
+	Teamwork = 75
+	Aggression = 75
+	Skin = 4
+	VoicePitch = 100
+End
+
+Hard+PunchT Tyler
+	Skin = 1
+	VoicePitch = 90
+End
+
+Hard+Rifle Victor
+	Skin = 2
+	VoicePitch = 98
+End
+
+Hard+Sniper Vladimir
+	Skin = 3
+	VoicePitch = 110
+End
+
+Hard+Shotgun Wreak
+	Aggression = 75
+	Skin = 2
+	VoicePitch = 94
+End
+
+Hard+Spray Zane
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+Rifle Zim
+	Skin = 2
+	VoicePitch = 110
+End
+
+Hard Lukas
+	VoicePitch = 111	
+End
+
+Hard Mabel
+	VoicePitch = 112	
+End
+
+Hard Malo
+	VoicePitch = 113
+End
+
+Hard Navid
+	VoicePitch = 114	
+End
+
+Hard Nicholas
+	VoicePitch = 115
+End
+
+Hard Pablo
+	VoicePitch = 116
+End
+
+Hard Patrick
+	VoicePitch = 117
+End
+
+Hard Pello
+	VoicePitch = 118
+End
+
+Hard Pooky
+	VoicePitch = 119
+End
+
+Hard Primo
+	VoicePitch = 120	
+End
+
+Hard Rex
+	VoicePitch = 121
+End
+
+Hard Rollo
+	VoicePitch = 122	
+End
+
+Hard Rudolph
+	VoicePitch = 123	
+End
+
+Hard Sam
+	VoicePitch = 100	
+End
+
+Hard Sebastian
+	VoicePitch = 99	
+End
+
+Hard Simon
+	VoicePitch = 98	
+End
+
+Hard Sparky
+	VoicePitch = 97
+End
+
+Hard Ranianleo	
+	VoicePitch = 93	
+End
+
+//----------------------------------------
+
+Tough+Sniper Adrian
+	Skin = 3
+	VoicePitch = 120
+End
+
+Tough Ben
+	Teamwork = 50
+	Aggression = 75
+	Skin = 4
+	VoicePitch = 86
+End
+
+Tough+Rifle Brad
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Rifle Connor
+	Skin = 2
+	VoicePitch = 104
+End
+
+Tough+RifleT Dave
+	Skin = 4
+	VoicePitch = 98
+End
+
+Tough Dan
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough Daniel
+	Teamwork = 90
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 90
+End
+
+Tough+Rifle Derek
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough+Shotgun Don
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough Eddie
+	Teamwork = 0
+	Aggression = 0
+	Skin = 2
+	VoicePitch = 115
+End
+
+Tough Eddit
+	Teamwork = 0
+	Aggression = 0
+	Skin = 2
+	VoicePitch = 96
+End
+
+Tough+Rifle Eric
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+RifleT Erik
+	Skin = 2
+	VoicePitch = 110
+End
+
+Tough+Rifle Fiend
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 96
+End
+
+Tough+Rifle Finn
+	Skin = 4
+	VoicePitch = 112
+End
+
+Tough Inmate
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 96
+End
+
+Tough Jeff
+	Skin = 1
+	VoicePitch = 90
+End
+
+Tough Kent
+	Teamwork = 25
+	Aggression = 90
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+Rifle Kevin
+	Skin = 2
+	VoicePitch = 115
+End
+
+Tough Matches
+	Aggression = 0
+	Skin = 1
+	VoicePitch = 96
+End
+
+Tough Notorious
+	Aggression = 50
+	Skin = 4
+	VoicePitch = 96
+End
+
+Tough RealOscar
+	Teamwork = 90
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 90
+End
+
+Tough Phil
+	Teamwork = 75
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+RifleT Rebel
+	Aggression = 25
+	Skin = 4
+	VoicePitch = 96
+End
+
+Tough+RifleT Reed
+	Skin = 4
+	VoicePitch = 107
+End
+
+Tough+Rifle Rick
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough Roland
+	Teamwork = 70
+	Aggression = 20
+	Skin = 2
+	VoicePitch = 115
+End
+
+Tough Ted
+	Skin = 1
+	VoicePitch = 98
+End
+
+Tough+Rifle Troy
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Rifle Vandal
+	Aggression = 0
+	Skin = 2
+	VoicePitch = 96
+End
+
+Tough+RifleT Wade
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+Rifle Wayne
+	Skin = 1
+	VoicePitch = 86
+End
+
+Tough+RifleT Xander
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Rifle Xavier
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough Dixie	
+	VoicePitch = 94
+End
+
+Tough Derry	
+	VoicePitch = 93
+End
+
+Tough Crispin	
+	VoicePitch = 93
+End	
+
+Tough Crimson	
+	VoicePitch = 92
+End
+
+Tough Corby	
+	VoicePitch = 91
+End 
+
+Tough Dario	
+	VoicePitch = 90
+End
+
+Tough Bruno	
+	VoicePitch = 89
+End
+
+Tough Jeremy	
+	VoicePitch = 89
+End
+
+Tough Jess	
+	VoicePitch = 88
+End
+
+Tough Mighty	
+	VoicePitch = 120
+End
+
+Tough Murphy	
+	VoicePitch = 99
+End
+
+Tough Hwatas
+	VoicePitch = 89	
+End
+
+//----------------------------------------
+
+Normal+Rifle Adam
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal+PunchT Andy
+	Skin = 2
+	VoicePitch = 90
+End
+
+Normal Chris
+	Skin = 3
+	VoicePitch = 100
+End
+
+Normal Colin
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+Rifle Dennis
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal+Shield RealDennis
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal Doug
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal+Sniper Duffy
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal+RifleT Freak
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal RealGary
+	Skin = 3
+	VoicePitch = 95
+End
+
+Normal Grant
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal Greg
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal+Sniper Ian
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal+Sniper Ianl
+	Skin = 4
+	VoicePitch = 115
+End
+
+Normal James
+	Aggression = 100
+	Teamwork = 75
+	VoicePitch = 106
+	Skin = 2
+End
+
+Normal Jerry
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal Jon
+	Skin = 1
+	VoicePitch = 96
+End
+
+Normal Keith
+	Skin = 2
+	VoicePitch = 98
+End
+
+Normal+Sniper Kirk
+	Aggression = 0
+	Teamwork = 25
+    Skin = 2
+	VoicePitch = 105
+End
+
+Normal Leon
+	Teamwork = 90
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal+Spray Maniac
+	Aggression = 100
+	Skin = 4
+	VoicePitch = 100
+End
+
+Normal Mark
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal Markl
+	Skin = 2
+	VoicePitch = 105
+End
+
+Normal Matt
+	Skin = 1
+	VoicePitch = 95
+End
+
+Normal+RifleT Mike
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal Nate
+	Skin = 4
+	VoicePitch = 99
+End
+
+Normal Paul
+	Skin = 3
+	VoicePitch = 98
+End
+
+Normal Pete
+	Teamwork = 75
+	Aggression = 75
+	Skin = 3
+	VoicePitch = 110
+End
+
+Normal Pimp
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Normal+Sniper Psycho
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Normal Roger
+	Teamwork = 50
+	Aggression = 90
+	Skin = 4
+	VoicePitch = 88
+End
+
+Normal+Shield Sasha
+	Aggression = 25
+	Teamwork = 75
+	VoicePitch = 111
+	Skin = 1
+End
+
+Normal Scammer
+	Aggression = 75
+	Skin = 4
+	VoicePitch = 100
+End
+
+Normal Scar
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal Scott
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal Steve
+	Skin = 2
+	VoicePitch = 115
+End
+
+Normal Tom
+	Skin = 3
+	VoicePitch = 110
+End
+
+Normal Yahn
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal Lakia
+	VoicePitch = 89
+End
+
+Normal Leopold
+	VoicePitch = 88
+End
+
+Normal Kellan
+	VoicePitch = 87
+End
+
+Normal Justin
+	VoicePitch = 100
+End
+
+Normal Jefferson
+	VoicePitch = 101
+End
+
+Normal Haley
+	VoicePitch = 102
+End
+
+Normal Huey
+	VoicePitch = 103
+End
+
+Normal Elvis
+	VoicePitch = 104
+End
+
+Normal Duke
+	VoicePitch = 105
+End
+
+Normal Cromit
+	VoicePitch = 104	
+End
+
+Normal Yaksuman	
+	VoicePitch = 113	
+End
+
+Normal Neogaia
+	VoicePitch = 90
+End
+
+//----------------------------------------
+
+Fair Alfred
+	VoicePitch = 110
+End
+
+Fair Bill
+	VoicePitch = 100
+End
+
+Fair Brandon
+	VoicePitch = 99
+End
+
+Fair+Spray Calvin
+	VoicePitch = 120
+End
+
+Fair Cooper
+	Teamwork = 100
+	Aggression = 0
+	Skin = 3
+	VoicePitch = 115
+End
+
+Fair Dean
+	VoicePitch = 111
+End
+
+Fair Dustin
+	VoicePitch = 98
+End
+
+Fair Ethan
+	VoicePitch = 112
+End
+
+Fair Floyd
+	Teamwork = 50
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 113
+End
+
+Fair Harold
+	VoicePitch = 90
+End
+
+Fair Henry
+	VoicePitch = 120
+End
+
+Fair Irving
+	VoicePitch = 118
+End
+
+Fair Jason
+	VoicePitch = 116
+End
+
+Fair+Spray Jenssen
+	VoicePitch = 112
+End
+
+Fair Josh
+	VoicePitch = 114
+End
+
+Fair Kenny
+	Teamwork = 75
+	Aggression = 75
+	Skin = 2
+	VoicePitch = 120
+End
+
+Fair+Rifle Leonard
+	Skin = 2
+	VoicePitch = 105
+End
+
+Fair Madman
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 105
+End
+
+Fair Martin
+	VoicePitch = 110
+End
+
+Fair Morris
+	Teamwork = 50
+	Aggression = 50
+	Skin = 4
+	VoicePitch = 111
+End
+
+Fair Nick
+	VoicePitch = 98
+End
+
+Fair Norm
+	VoicePitch = 92
+End
+
+Fair Orin
+	VoicePitch = 113
+End
+
+Fair Pat
+	VoicePitch = 114
+End
+
+Fair Perry
+	VoicePitch = 115
+End
+
+Fair Peter
+	Teamwork = 50
+	Aggression = 50
+	Skin = 3
+	VoicePitch = 109
+End
+
+Fair Quentin
+	Teamwork = 25
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 89
+End
+
+Fair Rat
+	Aggression = 0
+	Skin = 4
+	VoicePitch = 105
+End
+
+Fair Ron
+	VoicePitch = 100
+End
+
+Fair Scratch
+	Aggression = 40
+	Skin = 2
+	VoicePitch = 105
+End
+
+Fair Screech
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 105
+End
+
+Fair Shawn
+	VoicePitch = 102
+End
+
+Fair Splinter
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 105
+End
+
+Fair Tim
+	VoicePitch = 98
+End
+
+Fair Will
+	VoicePitch = 96
+End
+
+Fair Worm
+	Aggression = 50
+	Skin = 4
+	VoicePitch = 105
+End
+
+Fair Wyatt
+	VoicePitch = 94
+End
+
+Fair Frank
+	VoicePitch = 118	
+End
+	
+Fair Frasier
+	VoicePitch = 117	
+End
+
+Fair Yaro
+	VoicePitch = 116	
+End
+
+Fair Zeki
+	VoicePitch = 115	
+End
+
+Fair Verai
+	VoicePitch = 114	
+End
+
+Fair Poco
+	VoicePitch = 113	
+End
+
+Fair Oscar
+	VoicePitch = 112
+End
+
+Fair Neal
+	VoicePitch = 111
+End
+
+//----------------------------------------
+
+Easy Albert
+	VoicePitch = 100
+End
+
+Easy Allen
+	VoicePitch = 110
+End
+
+Easy Bert
+	VoicePitch = 120
+End
+
+Easy RealBob
+	VoicePitch = 99
+End
+
+Easy Cecil
+	VoicePitch = 120
+End
+
+Easy Clarence
+	VoicePitch = 125
+End
+
+Easy Crackpot
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 110
+End
+
+Easy Filth
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 110
+End
+
+Easy Elliot
+	VoicePitch = 110
+End
+
+Easy Elmer
+	VoicePitch = 100
+End
+
+Easy Ernie
+	VoicePitch = 112
+End
+
+Easy Eugene
+	VoicePitch = 121
+End
+
+Easy Fergus
+	VoicePitch = 99
+End
+
+Easy Ferris
+	VoicePitch = 119
+End
+
+Easy RealFrank
+	VoicePitch = 118
+End
+
+Easy RealFrasier
+	VoicePitch = 117
+End
+
+Easy Fred
+	VoicePitch = 116
+End
+
+Easy George
+	VoicePitch = 115
+End
+
+Easy Graham
+	VoicePitch = 114
+End
+
+Easy Gus
+	Teamwork = 50
+	Aggression = 100
+	Skin = 4
+	VoicePitch = 107
+End
+
+Easy Harvey
+	VoicePitch = 112
+End
+
+Easy Irwin
+	VoicePitch = 111
+End
+
+Easy Larry
+	VoicePitch = 105
+End
+
+Easy Lester
+	VoicePitch = 110
+End
+
+Easy Lunatic
+	Aggression = 100
+	Skin = 4
+	VoicePitch = 110
+End
+
+Easy Marvin
+	VoicePitch = 109
+End
+
+Easy Neil
+	VoicePitch = 108
+End
+
+Easy Niles
+	VoicePitch = 122
+End
+
+Easy Oliver
+	VoicePitch = 120
+End
+
+Easy Opie
+	VoicePitch = 125
+End
+
+Easy Outcast
+	Aggression = 100
+	Skin = 2
+	VoicePitch = 110
+End
+
+Easy Ryan
+	VoicePitch = 95
+End
+
+Easy Quincy
+	Teamwork = 75
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 98
+End
+
+Easy Stanley
+	Teamwork = 0
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 90
+End
+
+Easy Teddy
+	Aggression = 100
+	Teamwork = 75
+	VoicePitch = 92
+	Skin = 3
+End
+
+Easy Toby
+	VoicePitch = 92
+End
+
+Easy Troll
+	Aggression = 75
+	Skin = 1
+	VoicePitch = 110
+End
+
+Easy Ulric
+	VoicePitch = 100
+End
+
+Easy Ulysses
+	VoicePitch = 102
+End
+
+Easy Uri
+	VoicePitch = 104
+End
+
+Easy Vern
+	Teamwork = 100
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 103
+End
+
+Easy Waldo
+	VoicePitch = 108
+End
+
+Easy Wally
+	VoicePitch = 95
+End
+
+Easy Walt
+	VoicePitch = 100
+End
+
+Easy Weasel
+	Aggression = 0
+	Skin = 3
+	VoicePitch = 110
+End
+
+Easy Wesley
+	VoicePitch = 120
+End
+
+Easy Yanni
+	VoicePitch = 112
+End
+
+Easy Yogi
+	VoicePitch = 99
+End
+
+Easy Yuri
+	VoicePitch = 110
+End
+
+Easy Jean
+	VoicePitch = 110	
+End
+
+Easy Ssangma
+	VoicePitch = 100	
+End
+
+Easy Neige
+	VoicePitch = 102
 End
